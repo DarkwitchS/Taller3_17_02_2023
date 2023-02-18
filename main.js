@@ -1,19 +1,7 @@
-let continuar = true;
-let numMayor = 0 
-let numActual;
-let mensaje = "Los números ingresados son: ";
+sumando1 = Number(prompt("Ingrese el primer sumando"));
+sumando2 = Number(prompt("Ingrese segundo sumando"));
 
-while(continuar){
-    numActual = Number(prompt("Ingrese un número"));
-
-    if(numActual>numMayor){
-        numMayor = numActual;
-    }
-    mensaje += `, ${numActual}`
-    continuar = Number(prompt("Si desea continuar presione 1, si no, presione 0"));
-}
-
-alert(`${mensaje}.\nEl número mayor fue ${numMayor}`);
+alert(`La suma de ${sumando1} + ${sumando2} = ${sumando1 + sumando2}`);
 
 
 
