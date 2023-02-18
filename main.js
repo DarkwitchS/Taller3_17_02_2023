@@ -1,7 +1,9 @@
-sumando1 = Number(prompt("Ingrese el primer sumando"));
-sumando2 = Number(prompt("Ingrese segundo sumando"));
+let variableA = Number(prompt("Ingrese un número para la variable A"));
+let variableB = Number(prompt("Ingrese un número para la variable B"));
+let variableC = Number(prompt("Ingrese un número para la variable C"));
 
-alert(`La suma de ${sumando1} + ${sumando2} = ${sumando1 + sumando2}`);
+console.log(`El número mayor entre ${variableA}, ${variableB} y ${variableC} es:  ${Math.max(variableA,variableB,variableC)}`);
+console.log(`El número menor entre ${variableA}, ${variableB} y ${variableC} es:  ${Math.min(variableA,variableB,variableC)}`);
 
 
 
