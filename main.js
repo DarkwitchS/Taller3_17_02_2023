@@ -1,21 +1,22 @@
-let continuar = true;
-let numPar = 0;
-let numImpar = 1;
-let numActual;
-let mensajeSuma = "Los números pares ingresados son: ";
-let mensajeMultip = "Los números impares ingresados son: ";
+let N;
+let mensaje = "El número ingresado ";
+let sumaD = 0;
+let sumaMensaje = ``;
+N = Number(prompt("Ingrese un número"));
 
-while(continuar){
-    numActual = Number(prompt("Ingrese un número"));
+for(let i = 1; i < N; i++){
+    
+    if(N % i == 0){
+        sumaD += i;
+        sumaMensaje += `${i} + `
+    }  
 
-    if(numActual % 2 == 0){
-        numPar += numActual;
-        mensajeSuma += `, ${numActual} `
-    }else{
-        numImpar = numImpar * numActual;
-        mensajeMultip += `, ${numActual} `
-    }
-    continuar = Number(prompt("Si desea continuar presione 1, si no, presione 0"));
 }
 
-alert(`${mensajeSuma} y su suma es = ${numPar}.\n${mensajeMultip} y su multiplicación es = ${numImpar}`);
+sumaMensaje = sumaMensaje.slice(0, -2);
+
+if(sumaD == N){
+    alert(`El número ${N} es perfecto.\nLa suma de sus divisores es : ${sumaMensaje} = ${sumaD} `);
+}else{
+    alert(`El número ${N} no es perfecto`)
+}
